@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FFC928;
+  --color-primary-dark: #E6B300;
+  --color-secondary: #111111;
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  body { font-family: var(--font-family-sans); -webkit-font-smoothing: antialiased; background-color: #F9FAFB; color: #111111; }
+}
+
+@layer components {
+  .btn-primary { background-color: var(--color-primary); color: var(--color-secondary); font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 9999px; transition: all 0.2s; cursor: pointer; border: none; display: inline-flex; align-items: center; justify-content: center; }
+  .btn-primary:hover { background-color: var(--color-primary-dark); }
+  .btn-primary:active { transform: scale(0.95); }
+  .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+  .card { background: white; border-radius: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid #F3F4F6; padding: 1rem; }
+  .input-field { width: 100%; padding: 0.75rem 1rem; border: 1px solid #E5E7EB; border-radius: 0.75rem; outline: none; background: white; transition: all 0.2s; font-size: 0.875rem; }
+  .input-field:focus { border-color: var(--color-primary); box-shadow: 0 0 0 2px rgba(255, 201, 40, 0.3); }
+}
+
+.app-container { max-width: 480px; margin: 0 auto; min-height: 100vh; background: white; position: relative; }
